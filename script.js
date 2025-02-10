@@ -42,12 +42,11 @@ function playNim(){
 	
 	// Define function cpuTurn	
 	function cpuTurn(count){	
-		let turn=22;	
-		while(turn!=1 && count+turn>20){	
-			turn=Math.floor(Math.random()*3)+1;	
-		}	
-		alert("cpu counts "+turn);	
-	    return turn;	
+		if (count==18) turn = 2;
+		else if (count > 18) turn == 1;
+		else turn = Math.floor(Math.random()*3)+1;	
+		alert("cpu counts "+turn);		
+		return turn;	
 	}	
 	
 	// Define function cpuTrainer	
